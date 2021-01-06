@@ -29,7 +29,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
         {{- $mainCSSOptions := (dict "targetPath" "css/main.min.css" "outputStyle" "compressed") -}}
         {{- $main := resources.Get "scss/main.scss" | resources.ToCSS $mainCSSOptions | resources.Fingerprint -}}
-        <link rel="stylesheet" href="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}">
+        <link rel="stylesheet" href="{{ $main.RelPermalink }}">
         {{- if eq (i18n "letter_direction") "RTL" -}}
           {{- $rtl := resources.Get "css/rtl.css" | minify -}}
           <link rel="stylesheet" href="{{ $rtl.RelPermalink }}">
@@ -56,7 +56,7 @@
         {{- end -}}
         {{- $cssSlice = $cssSlice | append (resources.Get "scss/main.scss" | toCSS) -}}
         {{- $css := $cssSlice | resources.Concat "css/bundle.css" | minify | fingerprint -}}
-        <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+        <link rel="stylesheet" href="{{ $css.RelPermalink }}">
         {{- if eq (i18n "letter_direction") "RTL" -}}
           {{- $rtl := resources.Get "css/rtl.css" | minify -}}
           <link rel="stylesheet" href="{{ $rtl.RelPermalink }}">
