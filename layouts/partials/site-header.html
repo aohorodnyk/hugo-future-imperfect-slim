@@ -26,9 +26,9 @@
         {{ end }}
       {{ end }}
       {{ if .Site.Params.header.shareMenu }}<a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>{{ end }}
-      {{ if .Site.Params.header.searchMenu }}<a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>{{ end }}
+      {{ if .Site.Params.header.searchMenu }}<a href="#" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>{{ end }}
     </menu>
-    {{ if .Site.Params.header.searchMenu }}<a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>{{ end }}
+    {{ if .Site.Params.header.searchMenu }}<a href="#" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>{{ end }}
     {{ if .Site.Params.header.shareMenu }}<a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>{{ end }}
     {{ if .Site.Params.header.languageMenu }}<a href="#lang-menu" class="nav lang-toggle" lang="{{ .Site.Language.Lang }}">{{ .Site.Language.Lang }}</a>{{ end }}
     <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
